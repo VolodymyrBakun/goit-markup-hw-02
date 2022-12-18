@@ -1,12 +1,49 @@
+:root {
+    /* IRIS */
+    --Primary-brand-color: #4D5AE5; 
+
+    /* OCEAN */
+    --Pressed-state-color: #404BBF;
+
+    /* Navy blue */
+    --Dark-color: #2E2F42;
+
+    /* GREEN */
+    --Success-color: #31D0AA;
+
+    /* SLATE */
+    --Text-color: #434455;
+
+    /* LIGHT SLATE */
+    --Subtle-Text-color: #8E8F99;
+
+    /* CORNFLOWER */
+    --Accent-color: #E7E9FC;
+
+    /* CLOUD */
+    --Light-color: #F4F4FD;
+
+}
+
+
 body {
   font-family: "Roboto", sans-serif;
-  color: #434455;
+  color: var(--Text-color);
 }
+
+.list {
+   list-style: none;
+}
+
+.link{
+    text-decoration: none;
+}
+
 /* -----------HEADER------------- */
 .header {
 }
 .logo {
-font-family: 'Raleway';
+font-family: 'Raleway', sans-serif;
 font-style: normal;
 font-weight: 800;
 font-size: 18px;
@@ -14,11 +51,10 @@ line-height: 1.33;
 align-items: center;
 letter-spacing: 0.03em;
 text-transform: uppercase;
-/* NAVY BLUE */
-color: #2E2F42;
+color: var(--Dark-color);
 }
 .logo-part {
-font-family: 'Raleway';
+font-family: 'Raleway', sans-serif;
 font-style: normal;
 font-weight: 800;
 font-size: 18px;
@@ -26,8 +62,12 @@ line-height: 1.33;
 align-items: center;
 letter-spacing: 0.03em;
 text-transform: uppercase;
-/* IRIS */
-color: #4D5AE5;
+color: var(--Primary-brand-color);
+}
+
+.logo:hover,
+.logo:focus {
+color: var(--Pressed-state-color);
 }
 
 .header-navigation {
@@ -39,27 +79,33 @@ color: #4D5AE5;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #2e2f42;
-  /* NAVY BLUE */
+  color: var(--Dark-color);
 }
+.header-link:hover,
+.header-link:focus {
+color: var(--Pressed-state-color);
+}
+
 .header-contact {
 }
 .header-contact-item {
 }
 .header-contact-link {
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  /* SLATE */
-  color: #434455;
+  color: var(--Text-color);
 }
+.header-contact-link:hover,
+.header-contact-link:focus  {
+color:var(--Pressed-state-color);
+}
+
 /* -------------------Section HERO----------------- */
 .main {
 }
 .hero {
-  /* NAVY BLUE */
-  background: #2e2f42;
+  background: var(--Dark-color);
 }
 .hero-title {
   font-weight: 600;
@@ -70,17 +116,22 @@ color: #4D5AE5;
   color: #ffffff;
 }
 .hero-btn {
-  font-family: "Roboto";
-  font-style: normal;
+  font-family: inherit;
   font-weight: 600;
   font-size: 16px;
   line-height: calc(19 / 16);
   align-items: center;
   letter-spacing: 0.04em;
   color: #ffffff;
-  /* IRIS */
-  background: #4d5ae5;
+  cursor: pointer;
+  background: var(--Primary-brand-color);
 }
+.hero-btn:hover,
+.hero-btn:focus {
+background: var(--Pressed-state-color);
+}
+
+
 
 /* -------------------Section ABOUT----------------- */
 
@@ -95,16 +146,13 @@ color: #4D5AE5;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  /* NAVY BLUE */
-  color: #2e2f42;
+  color: var(--Dark-color);
 }
 .about-text {
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  /* SLATE */
-  color: #434455;
+  color: var(--Text-color);
 }
 
 /* -------------------Section PRODUCTS----------------- */
@@ -118,8 +166,7 @@ color: #4D5AE5;
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-
-  color: #2e2f42;
+  color: var(--Dark-color);
 }
 .products-list {
 }
@@ -131,8 +178,7 @@ color: #4D5AE5;
 /* -------------------Section TEAM----------------- */
 
 .team {
-  /* CLOUD */
-  background: #f4f4fd;
+  background: var(--Light-color);
 }
 .team-title {
   font-weight: 600;
@@ -141,7 +187,7 @@ color: #4D5AE5;
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-  color: #2e2f42;
+  color: var(--Dark-color);
 }
 .team-list {
 }
@@ -156,29 +202,43 @@ color: #4D5AE5;
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.02em;
-  /* NAVY BLUE */
-  color: #2e2f42;
+  color: var(--Dark-color);
 }
 .team-item-text {
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.02em;
-  /* SLATE */
-  color: #434455;
+  color: var(--Text-color);
 }
 
 /* -------------------Section FOOTER----------------- */
 
 .footer {
+background: var(--Dark-color);
+}
+
+.footer-logo {
+font-family: 'Raleway', sans-serif;
+font-style: normal;
+font-weight: 800;
+font-size: 18px;
+line-height: calc(21/18);
+align-items: center;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: var(--Light-color);
+}
+
+.footer-logo:hover,
+.footer-logo:focus {
+color: var(--Pressed-state-color);
+background-color: #ffffff;
 }
 
 .footer-text {
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  /* CORNFLOWER */
-  color: #e7e9fc;
+  color: var(--Accent-color);
 }
